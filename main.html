@@ -34,100 +34,95 @@
 <div class="beauty">
     <img src="./proj pics/IMG_20190711_121438.jpg">
     <div>
+        <p class="info">Name: Williams bolt</p>
         <div class="hide" id="hide_3">
             <p>Age: 20</p>
             <p>Height: 50</p>
         </div>
-        <p class="info">Name: Williams bolt</p>
-        
     </div>
 </div>
 <hr>
 <div class="beauty">
     <img src="./proj pics/school.jpg">
     <div>
+        <p class="info">Name: Jochebed</p>
         <div class="hide">
             <p>Name: Ola</p>
             <p>Age: 20</p>
             <p>Height: 50</p>
         </div>
-        <p class="info">Name: Jochebed</p>
     </div>
 </div>
 <hr>
 <div class="beauty"> 
     <img src="proj pics/fashoin store.jpg">
     <div>
+        <p class="info">Name: Jochebed</p>
         <div class="hide">
             <p>Name: Ola</p>
             <p>Age: 20</p>
             <p>Height: 50</p>
         </div>
-        <p class="info">Name: Jochebed</p>
-       
     </div>
 </div>
 <hr>
 <div class="beauty">
     <img src="download.jpg">
     <div>
+        <p class="info">Name: Jochebed</p>
         <div class="hide">
             <p>Name: Ola</p>
             <p>Age: 20</p>
             <p>Height: 50</p>
         </div>
-        <p class="info">Name: Jochebed</p>
-       
     </div>
 </div>
 <hr>
 <div class="beauty"> 
     <img src="./proj pics/images.jpg">
     <div>
+        <p class="info">Name: Jochebed</p>
         <div class="hide">
             <p>Name: Ola</p>
             <p>Age: 20</p>
             <p>Height: 50</p>
         </div>
-        <p class="info">Name: Jochebed</p>
-        
     </div>
 </div>
 <hr>
 <div class="beauty">
     <img src="./proj pics/pic1.jpg.JPG">
     <div>
+        <p class="info">Name: Jochebed</p>
         <div class="hide">
             <p>Name: Ola</p>
             <p>Age: 20</p>
             <p>Height: 50</p>
         </div>
-        <p class="info">Name: Jochebed</p>
-        
     </div>
 </div>
 <hr>
 <div class="beauty">
     <img src="./proj pics/fashion3.jpg">
     <div>
+        <p class="info">Name: Jochebed</p>
         <div class="hide">
             <p>Name: Ola</p>
             <p>Age: 20</p>
             <p>Height: 50</p>
         </div>
-        <p class="info">Name: Jochebed</p>
     </div>
 </div>
 <hr>
 <div class="beauty">
     <img src="college.jpg">
     <div>
+        <p class="info">Name: Jochebed</p>
         <div class="hide">
             <p>Name: Ola</p>
             <p>Age: 20</p>
             <p>Height: 50</p>
         </div>
-        <p class="info">Name: Jochebed</p>
     </div>
 </div>
 <hr>
@@ -135,22 +130,27 @@
 
 <script>
    
-   const itemToClick = document.getElementsByClassName("info");
-		
-		for(i=0; i<itemToClick.length; i++){
-			const item = itemToClick[i];
-
-			item.addEventListener("click", function(e){
-				const clicked = e.target;
-				console.log(clicked)
-				const elementSibling = clicked.previousElementSibling;
- 
-    			elementSibling.classList.toggle("show");
-			});
-		};
-
+        const isHidden = document.getElementsByClassName("info");
         
-        // git remote add origin https://github.com/Eunice-commits/usersapp.git
+
+        for(i= 0; i < isHidden.length; i++){
+            const item = isHidden[i];
+            item.addEventListener("click", function(e){
+                const clickedItem = e.target;
+                let content = clickedItem.parentElement;
+                console.log(content)
+
+                console.log(content.style.display === "flex");
+                
+                // if(content.style.display === "none"){
+                //     content.style.display = "block"
+                // }else{
+                //     content.style.display = "none";
+                // }
+            });
+        };
+        
+        git remote add origin https://github.com/Eunice-commits/myusersapp.git
 </script>
 </body>
 </html>
